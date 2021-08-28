@@ -1,4 +1,8 @@
 from setuptools import setup, find_packages
+
+with open('README.md') as readme:
+    long_description = readme.read().strip()
+
 setup(
     name="linkparser",
     version="1.0",
@@ -7,17 +11,10 @@ setup(
     url="https://github.com/thehackersbrain/linkparser",
     author_email="techw803@gmail.com",
     license='MIT',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     keywords=['linkparser', 'thehackersbrain',
               'hacking', 'web scraping', 'python', 'python3'],
-    classifiers=[
-        'Development Status :: 1 - Intial Build',
-        'Intended Audience :: Hackers',
-        'Programming Language :: Python :: 3',
-        'Operating System :: Linux :: Arch Linux',
-        'Operating System :: Linux :: Kali Linux',
-        'Operating System :: Microsoft :: Windows',
-        'Operating System :: MacOS :: MacOS X'
-    ],
     packages=find_packages(),
     install_requires=['requests', 'rich', 'pyfiglet', 'bs4'],
     entry_points={
